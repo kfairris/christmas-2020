@@ -1,0 +1,23 @@
+{
+  "name": "christmas-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:config": "browser-sync start --config bs-config.js",
+    "start": "browser-sync start --server --files '*.css' '*.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kfairris/christmas-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kfairris/christmas-2020/issues"
+  },
+  "homepage": "https://github.com/kfairris/christmas-2020#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}

@@ -1,0 +1,119 @@
+body,
+body a {
+    color: #202020;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a.menu_item {
+    color: #202020;
+}
+header {
+    background-color: #cccccc;
+    position: sticky;
+    top: 0;
+    height: 85px;
+}
+header .wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sitename {
+    width: auto;
+    // align-self: flex-start;
+}
+#choose_mode ul {
+    display: flex;
+}
+#choose_mode li {
+    flex: 1;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+nav ul li {
+    flex: 1;
+    padding: 10px;
+}
+#welcome {
+    background-image: url(/images/welcome-bg.jpg);
+}
+#kennyalee {
+    background-image: url(/images/kennyalee-bg.jpg);
+}
+#emma {
+    background-image: url(/images/emma-bg.jpg);
+}
+#grant {
+    background-image: url(/images/grant-bg.jpg);
+}
+#timothy {
+    background-image: url(/images/timothy-bg.jpg);
+}
+#trooper {
+    background-color: darkgreen;
+}
+section {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.section > * {
+    border: 1px solid red;
+}
+.content {
+    display: flex;
+    align-items: center;
+}
+.content > * {
+    flex: 1;
+}
+
+.photo,
+.text {
+    padding: 2em;
+}
+
+.unsplash {
+    font-size: 12px;
+    text-align: right;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+footer {
+    height: 85px;
+    // position: sticky;
+    // bottom: 0;
+    background-image: url(/images/jesus-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 86%;
+    display: flex;
+    align-content: center;
+}
+footer > * {
+    flex: 1;
+}
+// header,
+footer {
+    display: none;
+}

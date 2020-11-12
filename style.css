@@ -1,0 +1,171 @@
+body,
+body a {
+  color: #202020;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a.menu_item {
+  color: #202020;
+}
+
+header {
+  background-color: #cccccc;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 85px;
+}
+
+header .wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sitename {
+  width: auto;
+}
+
+#choose_mode ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#choose_mode li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+}
+
+#welcome {
+  background-image: url(/images/welcome-bg.jpg);
+}
+
+#kennyalee {
+  background-image: url(/images/kennyalee-bg.jpg);
+}
+
+#emma {
+  background-image: url(/images/emma-bg.jpg);
+}
+
+#grant {
+  background-image: url(/images/grant-bg.jpg);
+}
+
+#timothy {
+  background-image: url(/images/timothy-bg.jpg);
+}
+
+#trooper {
+  background-color: darkgreen;
+}
+
+section {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.section > * {
+  border: 1px solid red;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.photo,
+.text {
+  padding: 2em;
+}
+
+.unsplash {
+  font-size: 12px;
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: auto;
+}
+
+footer {
+  height: 85px;
+  background-image: url(/images/jesus-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 86%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
