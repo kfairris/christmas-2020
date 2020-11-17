@@ -1,4 +1,4 @@
-new fullpage('#fullpage', {
+new fullpage('#fullpage1', {
     
     anchors: ['welcome', 'kennyalee', 'emma', 'grant', 'timothy', 'trooper'],
     menu: '#menu',
@@ -13,6 +13,6 @@ new fullpage('#fullpage', {
 });
 
 //methods
-fullpage_api.setAllowScrolling(false);
+fullpage_api.setAllowScrolling(true);
 fullpage_api.setScrollingSpeed(1700);
 
