@@ -69,6 +69,7 @@ nav ul li {
 }
 section {
     height: 100vh;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -77,19 +78,34 @@ section {
     flex-flow: row wrap;
 }
 .section > * {
-    border: 1px solid red;
+    border: 0 solid red;
 }
 .content {
+    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .content > * {
-    flex: 1;
+    flex: 1 0 300px;
 }
 
-.photo,
+.photo {
+    padding: 2em;
+    img {
+        width: 500px;
+        margin: 0 auto;
+        display: block;
+        transition: transform 0.5s;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+}
 .text {
     padding: 2em;
+    background-color: rgba(190, 190, 190, 0.5);
 }
 
 .unsplash {
@@ -112,8 +128,4 @@ footer {
 }
 footer > * {
     flex: 1;
-}
-// header,
-footer {
-    display: none;
 }
