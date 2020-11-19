@@ -62,7 +62,15 @@ header .wrapper {
     justify-content: space-between;
     align-items: center;
 }
-
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.3em;
+}
 #sitename {
     width: auto;
     // align-self: flex-start;
@@ -185,7 +193,7 @@ footer > * {
     flex: 1;
 }
 .overlay {
-    z-index: 9999;
+    z-index: 1;
     height: 100%;
     width: 100%;
     background-image: url(images/snow.png), url(images/snow2.png), url(images/snow3.png);
@@ -195,6 +203,7 @@ footer > * {
     bottom: 0;
     left: 0;
     right: 0;
+    display: none;
 }
 // CSS page transition
 // .cards {
