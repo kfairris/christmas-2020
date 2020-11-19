@@ -100,10 +100,6 @@ nav ul li {
 }
 #welcome {
     background-image: url(images/welcome-bg.jpg);
-    // to keep this section static while the other sections transition
-    position: absolute;
-    top: 56px;
-    z-index: 1;
 }
 #kennyalee {
     background-image: url(images/kennyalee-bg.jpg);
@@ -238,5 +234,11 @@ footer > * {
 @media (max-width: 400px) {
     .content {
         flex-direction: column;
+    }
+    .photo img {
+        max-width: 300px;
+    }
+    .break{
+        flex-basis: auto;
     }
 }

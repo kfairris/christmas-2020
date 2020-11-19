@@ -113,9 +113,6 @@ nav ul li a:hover {
 
 #welcome {
   background-image: url(images/welcome-bg.jpg);
-  position: absolute;
-  top: 56px;
-  z-index: 1;
 }
 
 #kennyalee {
@@ -265,6 +262,13 @@ footer > * {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .photo img {
+    max-width: 300px;
+  }
+  .break {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
