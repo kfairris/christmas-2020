@@ -35,7 +35,7 @@
     }
 }
 body,
-body a {
+body a, body a:hover {
     color: #202020;
 }
 img {
@@ -231,14 +231,17 @@ footer > * {
 //     color: #fff;
 // }
 
-@media (max-width: 400px) {
+@media (max-width: 900px) {
+    section{
+        flex-flow: column;
+    }
     .content {
         flex-direction: column;
     }
+    .content > * {
+        flex:1 0 100%;
+    }
     .photo img {
         max-width: 300px;
-    }
-    .break{
-        flex-basis: auto;
     }
 }
