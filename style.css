@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap");
 /* Snow effect taken from http://designshack.net/tutorialexamples/letitsnow/index.html */
 @keyframes snow {
   0% {
@@ -20,6 +21,7 @@
 body,
 body a, body a:hover {
   color: #202020;
+  text-decoration: none;
 }
 
 img {
@@ -56,6 +58,10 @@ header .wrapper {
           align-items: center;
 }
 
+h1, h2, h3 {
+  font-family: 'ChristmasJumper','Mountains of Christmas', serif;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -70,6 +76,7 @@ h3 {
 
 #sitename {
   width: auto;
+  padding: 10px;
 }
 
 #choose_mode ul {
@@ -111,7 +118,7 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-#welcome {
+#home {
   background-image: url(images/welcome-bg.jpg);
 }
 
@@ -212,15 +219,17 @@ section {
       align-self: flex-end;
   margin-left: auto;
   color: #cccccc;
+  padding: 5px 10px;
+  background-color: rgba(34, 34, 34, 0.5);
 }
 
 .unsplash a {
   color: #cccccc;
 }
 
-.unsplash span {
-  background-color: rgba(34, 34, 34, 0.5);
-  padding: 5px 10px;
+.unsplash a:hover {
+  color: #cccccc;
+  text-decoration: underline;
 }
 
 footer {
@@ -262,6 +271,7 @@ footer > * {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    height: auto;
   }
   .content {
     -webkit-box-orient: vertical;
@@ -276,6 +286,9 @@ footer > * {
   }
   .photo img {
     max-width: 300px;
+  }
+  .unsplash {
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
