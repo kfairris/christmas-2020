@@ -1,54 +1,53 @@
-// new fullpage('#fullpage1', {
-    
-//     anchors: ['welcome', 'kennyalee', 'emma', 'grant', 'timothy', 'trooper'],
-//     menu: '#menu',
-    
-//     //options here
-//     autoScrolling: false,
-//     scrollHorizontally: true,
+// function hamburgerToggle(x) {
+//   x.classList.toggle("change");
+// }
 
-//     //navigation
-//     navigation: 'true',
-//     navigationPosition: 'right'
+// let dropdown = document.querySelector('.hamburger-main');
+// let items = document.querySelectorAll('.menu_item');
+// const itemsArray = [...items];
+
+// dropdown.addEventListener('click', (e) => {
+//   if (dropdown.classList.contains('closed')) {
+//     dropdown.classList.remove('closed');
+//     itemsArray.forEach(node => node.classList.add('open'));
+//   } else {
+//     dropdown.classList.add('closed');
+//     itemsArray.forEach(node => node.classList.remove('open'));
+//   }
 // });
 
-// //methods
-// fullpage_api.setAllowScrolling(true);
-// fullpage_api.setScrollingSpeed(1700);
+// itemsArray.addEventListener('click', (s) => {
+//   console.log('clicked item');
+//   dropdown.classList.add('closed');
+//   itemsArray.forEach(node => node.classList.remove('open'));
+// });
 
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
+// https://stackoverflow.com/questions/64873128/how-to-make-my-burger-menu-dissapear-when-clicking-on-link
+
+const navSlide = () => {
+  const burger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+
+  //Toggle burger
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('no-shadow');
+    nav.classList.toggle('nav-active');
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navLinkFade .5s ease forwards ${index / 5 + .2}s`;
       }
-    }
+    });
+    burger.classList.toggle('toggle');
   });
+
+  //Moved outside the burger event listner to avoid duplicate event bindings and let the event listener programmatically trigger the burger click to hide it again.
+  navLinks.forEach((link, index) => {
+    link.addEventListener('click', () => {
+      burger.click();
+    });
+  });
+}
+navSlide();

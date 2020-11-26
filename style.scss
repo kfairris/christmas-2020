@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap");
+
+//Variables
+
+$red          : #eb0000;
+
 
 // @font-face {
 //     font-family: 'ChristmasJumper';
@@ -7,44 +12,9 @@
 //          url('fonts/ChristmasJumper-Lr5W.ttf')  format('truetype'), /* Safari, Android, iOS */
 //   }
 
-/* Snow effect taken from http://designshack.net/tutorialexamples/letitsnow/index.html */
-@keyframes snow {
-    0% {
-        background-position: 0px 0px;
-    }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-    }
-}
-
-@-moz-keyframes snow {
-    0% {
-        background-position: 0px 0px;
-    }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-    }
-}
-
-@-webkit-keyframes snow {
-    0% {
-        background-position: 0px 0px;
-    }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-    }
-}
-
-@-ms-keyframes snow {
-    0% {
-        background-position: 0px 0px;
-    }
-    100% {
-        background-position: 500px 1000px, 400px 400px, 300px 300px;
-    }
-}
 body,
-body a, body a:hover {
+body a,
+body a:hover {
     color: #202020;
     text-decoration: none;
 }
@@ -72,8 +42,10 @@ header .wrapper {
     justify-content: space-between;
     align-items: center;
 }
-h1,h2,h3 {
-    font-family: 'ChristmasJumper','Mountains of Christmas', serif;
+h1,
+h2,
+h3 {
+    font-family: "ChristmasJumper", "Mountains of Christmas", serif;
 }
 h1 {
     font-size: 2em;
@@ -102,7 +74,6 @@ nav ul {
     flex-direction: row;
 }
 nav ul li {
-    flex: 1;
     a {
         padding: 10px;
     }
@@ -111,6 +82,9 @@ nav ul li {
         color: #fff;
         text-decoration: none;
     }
+}
+.hamburger {
+    display: none;
 }
 #home {
     background-image: url(images/welcome-bg.jpg);
@@ -136,9 +110,13 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
+    padding-top: 66px; /* fixed header height*/
+    margin: -66px 0 0; /* negative fixed header height */
+    padding-bottom: 66px;
 }
 .section > * {
     border: 0 solid red;
@@ -186,11 +164,15 @@ section {
         color: #cccccc;
     }
     a:hover {
-        color:#cccccc;
+        color: #cccccc;
         text-decoration: underline;
     }
 }
-
+.divider {
+    height: 45vh;
+    width: 100%;
+    background-color: $red;
+}
 footer {
     // position: sticky;
     // bottom: 0;
@@ -204,6 +186,59 @@ footer {
 footer > * {
     flex: 1;
 }
+
+/* Parallax */
+
+// .section {
+//     position: relative;
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+//     perspective: 8px;
+//     perspective-origin: 0%;
+//     transform: translateZ(0px);
+// }
+// .content {
+//     transform-origin: 0;
+//     transform: translateZ(3px) scale(0.625);
+// }
+
+/* Snow effect taken from http://designshack.net/tutorialexamples/letitsnow/index.html */
+@keyframes snow {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-moz-keyframes snow {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-webkit-keyframes snow {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+@-ms-keyframes snow {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
 .overlay {
     z-index: 1;
     height: 100%;
@@ -248,7 +283,7 @@ footer > * {
 // }
 
 @media (max-width: 900px) {
-    section{
+    section {
         flex-flow: column;
         height: auto;
     }
@@ -256,12 +291,665 @@ footer > * {
         flex-direction: column;
     }
     .content > * {
-        flex:1 0 100%;
+        flex: 1 0 100%;
     }
     .photo img {
         max-width: 300px;
     }
     .unsplash {
-        margin-top:15px;
+        margin-top: 15px;
     }
+}
+@media (max-width: 640px) {
+    header .wrapper,
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #sitename {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        width: 100%;
+    }
+    // .hamburger {
+    //     display: inline-block;
+    //     cursor: pointer;
+    // }
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    // nav ul li.menu_item{
+    //     display:none;
+    // }
+    // nav ul li.menu_item.open{
+    //     display: block;
+    //     padding: 10px;
+    // }
+}
+
+// trying new toggle
+
+.nav-links {
+    position: fixed;
+    margin-top: calc(50vh / 2);
+    right: 0px;
+    height: 50vh;
+    top: 0;
+    background-color: var(--branding);
+    border-bottom-left-radius: 3rem;
+    border-top-left-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in;
+    background-color: rgba(56, 56, 56, 0.5);
+    justify-content: space-around;
+    padding: 15px 2px;
+}
+
+.nav-links li {
+    opacity: 0;
+}
+
+.nav-links li a {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.hamburger {
+    margin: 0.2em;
+    display: block;
+    cursor: pointer;
+    background-color: var(--branding);
+    padding: 16px 12px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 100%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.hamburger div {
+    width: 25px;
+    height: 2px;
+    background-color: #1b1b1b;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-405deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(405deg) translate(-5px, -5px);
+}
+
+//xmastree
+//@import "compass/css3";
+
+$gray         : #4b4b4b;
+$yellow       : #f5cd2d;
+$blue         : #96cbcf;
+$darkerYellow : #d8ba00;
+$red          : #eb0000;
+$green        : #649632;
+$darkerGreen  : #2d8434;
+$tan          : #aa782c;
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin animate($name, $time:1s, $algor:linear, $delay:"", $loop:infinite,$fill:"") {
+  -webkit-animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+	-moz-animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+	-ms-animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+	animation: #{$name} $time $algor #{$delay} $loop #{$fill};
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin icon($size) {
+    position: absolute;
+    display: block;
+    font-size: $size;
+    line-height: $size;
+    height: $size;
+    width: $size;
+}
+
+@include keyframes(flash) {
+  10% {
+    /* opacity: 0.5; */
+    @include transform(scale(0.5,0.5));
+  }
+}
+
+.xmasTree:before {
+  font-family: FontAwesome;
+  content: '\f005';
+  color: $yellow;
+  @include icon(60px);
+  top: 10px;
+  left: -20px;
+  @include animate($name:flash, $algor:ease, $fill:forwards);
+}
+
+.xmasTree {
+  @include animate($name:xmasTree, $fill:forwards);
+  
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: scale(0.5);
+  box-shadow:
+    0 3em 0 0 $gray
+    ,1em 4em 0 0 $gray
+    ,0 4em 0 0 $green
+    ,-1em 4em 0 0 $gray
+    ,-2em 5em 0 0 $gray
+    ,-1em 5em 0 0 $blue
+    ,0 5em 0 0 $green
+    ,1em 5em 0 0 $green
+    ,2em 5em 0 0 $gray
+    ,3em 6em 0 0 $gray
+    ,2em 6em 0 0 $green
+    ,1em 6em 0 0 $red
+    ,0 6em 0 0 $green
+    ,-1em 6em 0 0 $green
+    ,-2em 6em 0 0 $green
+    ,-3em 6em 0 0 $gray
+    ,-2em 7em 0 0 $gray
+    ,-1em 7em 0 0 $green
+    ,0 7em 0 0 $darkerGreen
+    ,1em 7em 0 0 $green
+    ,2em 7em 0 0 $gray
+    ,3em 8em 0 0 $gray
+    ,2em 8em 0 0 $green
+    ,1em 8em 0 0 $darkerGreen
+    ,0 8em 0 0 $green
+    ,-1em 8em 0 0 $darkerGreen
+    ,-2em 8em 0 0 $green
+    ,-3em 8em 0 0 $gray
+    ,-4em 9em 0 0 $gray
+    ,-3em 9em 0 0 $green
+    ,-2em 9em 0 0 $red
+    ,-1em 9em 0 0 $green
+    ,0 9em 0 0 $darkerYellow
+    ,1em 9em 0 0 $green
+    ,2em 9em 0 0 $blue
+    ,3em 9em 0 0 $green
+    ,4em 9em 0 0 $gray
+    ,3em 10em 0 0 $gray
+    ,2em 10em 0 0 $green
+    ,1em 10em 0 0 $darkerGreen
+    ,0 10em 0 0 $green
+    ,-1em 10em 0 0 $darkerGreen
+    ,-2em 10em 0 0 $green
+    ,-3em 10em 0 0 $gray
+    ,-4em 11em 0 0 $gray
+    ,-3em 11em 0 0 $green
+    ,-2em 11em 0 0 $darkerGreen
+    ,-1em 11em 0 0 $green
+    ,0 11em 0 0 $darkerGreen
+    ,1em 11em 0 0 $green
+    ,2em 11em 0 0 $darkerGreen
+    ,3em 11em 0 0 $darkerYellow
+    ,4em 11em 0 0 $gray
+    ,5em 12em 0 0 $gray
+    ,4em 12em 0 0 $green
+    ,3em 12em 0 0 $green
+    ,2em 12em 0 0 $green
+    ,1em 12em 0 0 $green
+    ,0 12em 0 0 $green
+    ,-1em 12em 0 0 $green
+    ,-2em 12em 0 0 $green
+    ,-3em 12em 0 0 $green
+    ,-4em 12em 0 0 $green
+    ,-5em 12em 0 0 $gray
+    ,-4em 13em 0 0 $gray
+    ,-3em 13em 0 0 $darkerYellow
+    ,-2em 13em 0 0 $green
+    ,-1em 13em 0 0 $blue
+    ,0 13em 0 0 $green
+    ,1em 13em 0 0 $green
+    ,2em 13em 0 0 $red
+    ,3em 13em 0 0 $green
+    ,4em 13em 0 0 $gray
+    ,3em 14em 0 0 $gray
+    ,2em 14em 0 0 $gray
+    ,1em 14em 0 0 $gray
+    ,0 14em 0 0 $tan
+    ,-1em 14em 0 0 $gray
+    ,-2em 14em 0 0 $gray
+    ,-3em 14em 0 0 $gray
+    ,-1em 15em 0 0 $gray
+    ,0 15em 0 0 $gray
+    ,1em 15em 0 0 $gray
+    ;
+}
+
+/*Keyframes*/
+@include keyframes(snow) {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@include keyframes(xmasTree) {
+  25% {
+    box-shadow:
+    0 3em 0 0 $gray
+    ,1em 4em 0 0 $gray
+    ,0 4em 0 0 $green
+    ,-1em 4em 0 0 $gray
+    ,-2em 5em 0 0 $gray
+    ,-1em 5em 0 0 $blue
+    ,0 5em 0 0 $green
+    ,1em 5em 0 0 $green
+    ,2em 5em 0 0 $gray
+    ,3em 6em 0 0 $gray
+    ,2em 6em 0 0 $green
+    ,1em 6em 0 0 $green
+    ,0 6em 0 0 $green
+    ,-1em 6em 0 0 $green
+    ,-2em 6em 0 0 $green
+    ,-3em 6em 0 0 $gray
+    ,-2em 7em 0 0 $gray
+    ,-1em 7em 0 0 $green
+    ,0 7em 0 0 $darkerGreen
+    ,1em 7em 0 0 $green
+    ,2em 7em 0 0 $gray
+    ,3em 8em 0 0 $gray
+    ,2em 8em 0 0 $green
+    ,1em 8em 0 0 $darkerGreen
+    ,0 8em 0 0 $green
+    ,-1em 8em 0 0 $darkerGreen
+    ,-2em 8em 0 0 $green
+    ,-3em 8em 0 0 $gray
+    ,-4em 9em 0 0 $gray
+    ,-3em 9em 0 0 $green
+    ,-2em 9em 0 0 $green
+    ,-1em 9em 0 0 $green
+    ,0 9em 0 0 $darkerYellow
+    ,1em 9em 0 0 $green
+    ,2em 9em 0 0 $blue
+    ,3em 9em 0 0 $green
+    ,4em 9em 0 0 $gray
+    ,3em 10em 0 0 $gray
+    ,2em 10em 0 0 $green
+    ,1em 10em 0 0 $darkerGreen
+    ,0 10em 0 0 $green
+    ,-1em 10em 0 0 $darkerGreen
+    ,-2em 10em 0 0 $green
+    ,-3em 10em 0 0 $gray
+    ,-4em 11em 0 0 $gray
+    ,-3em 11em 0 0 $green
+    ,-2em 11em 0 0 $darkerGreen
+    ,-1em 11em 0 0 $green
+    ,0 11em 0 0 $darkerGreen
+    ,1em 11em 0 0 $green
+    ,2em 11em 0 0 $darkerGreen
+    ,3em 11em 0 0 $darkerYellow
+    ,4em 11em 0 0 $gray
+    ,5em 12em 0 0 $gray
+    ,4em 12em 0 0 $green
+    ,3em 12em 0 0 $green
+    ,2em 12em 0 0 $green
+    ,1em 12em 0 0 $green
+    ,0 12em 0 0 $green
+    ,-1em 12em 0 0 $green
+    ,-2em 12em 0 0 $green
+    ,-3em 12em 0 0 $green
+    ,-4em 12em 0 0 $green
+    ,-5em 12em 0 0 $gray
+    ,-4em 13em 0 0 $gray
+    ,-3em 13em 0 0 $darkerYellow
+    ,-2em 13em 0 0 $green
+    ,-1em 13em 0 0 $blue
+    ,0 13em 0 0 $green
+    ,1em 13em 0 0 $green
+    ,2em 13em 0 0 $green
+    ,3em 13em 0 0 $green
+    ,4em 13em 0 0 $gray
+    ,3em 14em 0 0 $gray
+    ,2em 14em 0 0 $gray
+    ,1em 14em 0 0 $gray
+    ,0 14em 0 0 $tan
+    ,-1em 14em 0 0 $gray
+    ,-2em 14em 0 0 $gray
+    ,-3em 14em 0 0 $gray
+    ,-1em 15em 0 0 $gray
+    ,0 15em 0 0 $gray
+    ,1em 15em 0 0 $gray
+    ;
+  }
+  
+  50% {
+    box-shadow:
+    0 3em 0 0 $gray
+    ,1em 4em 0 0 $gray
+    ,0 4em 0 0 $green
+    ,-1em 4em 0 0 $gray
+    ,-2em 5em 0 0 $gray
+    ,-1em 5em 0 0 $green
+    ,0 5em 0 0 $green
+    ,1em 5em 0 0 $green
+    ,2em 5em 0 0 $gray
+    ,3em 6em 0 0 $gray
+    ,2em 6em 0 0 $green
+    ,1em 6em 0 0 $red
+    ,0 6em 0 0 $green
+    ,-1em 6em 0 0 $green
+    ,-2em 6em 0 0 $green
+    ,-3em 6em 0 0 $gray
+    ,-2em 7em 0 0 $gray
+    ,-1em 7em 0 0 $green
+    ,0 7em 0 0 $darkerGreen
+    ,1em 7em 0 0 $green
+    ,2em 7em 0 0 $gray
+    ,3em 8em 0 0 $gray
+    ,2em 8em 0 0 $green
+    ,1em 8em 0 0 $darkerGreen
+    ,0 8em 0 0 $green
+    ,-1em 8em 0 0 $darkerGreen
+    ,-2em 8em 0 0 $green
+    ,-3em 8em 0 0 $gray
+    ,-4em 9em 0 0 $gray
+    ,-3em 9em 0 0 $green
+    ,-2em 9em 0 0 $red
+    ,-1em 9em 0 0 $green
+    ,0 9em 0 0 $darkerYellow
+    ,1em 9em 0 0 $green
+    ,2em 9em 0 0 $green
+    ,3em 9em 0 0 $green
+    ,4em 9em 0 0 $gray
+    ,3em 10em 0 0 $gray
+    ,2em 10em 0 0 $green
+    ,1em 10em 0 0 $darkerGreen
+    ,0 10em 0 0 $green
+    ,-1em 10em 0 0 $darkerGreen
+    ,-2em 10em 0 0 $green
+    ,-3em 10em 0 0 $gray
+    ,-4em 11em 0 0 $gray
+    ,-3em 11em 0 0 $green
+    ,-2em 11em 0 0 $darkerGreen
+    ,-1em 11em 0 0 $green
+    ,0 11em 0 0 $darkerGreen
+    ,1em 11em 0 0 $green
+    ,2em 11em 0 0 $darkerGreen
+    ,3em 11em 0 0 $darkerYellow
+    ,4em 11em 0 0 $gray
+    ,5em 12em 0 0 $gray
+    ,4em 12em 0 0 $green
+    ,3em 12em 0 0 $green
+    ,2em 12em 0 0 $green
+    ,1em 12em 0 0 $green
+    ,0 12em 0 0 $green
+    ,-1em 12em 0 0 $green
+    ,-2em 12em 0 0 $green
+    ,-3em 12em 0 0 $green
+    ,-4em 12em 0 0 $green
+    ,-5em 12em 0 0 $gray
+    ,-4em 13em 0 0 $gray
+    ,-3em 13em 0 0 $darkerYellow
+    ,-2em 13em 0 0 $green
+    ,-1em 13em 0 0 $green
+    ,0 13em 0 0 $green
+    ,1em 13em 0 0 $green
+    ,2em 13em 0 0 $red
+    ,3em 13em 0 0 $green
+    ,4em 13em 0 0 $gray
+    ,3em 14em 0 0 $gray
+    ,2em 14em 0 0 $gray
+    ,1em 14em 0 0 $gray
+    ,0 14em 0 0 $tan
+    ,-1em 14em 0 0 $gray
+    ,-2em 14em 0 0 $gray
+    ,-3em 14em 0 0 $gray
+    ,-1em 15em 0 0 $gray
+    ,0 15em 0 0 $gray
+    ,1em 15em 0 0 $gray
+    ;
+  }
+  75% {
+    box-shadow:
+    0 3em 0 0 $gray
+    ,1em 4em 0 0 $gray
+    ,0 4em 0 0 $green
+    ,-1em 4em 0 0 $gray
+    ,-2em 5em 0 0 $gray
+    ,-1em 5em 0 0 $blue
+    ,0 5em 0 0 $green
+    ,1em 5em 0 0 $green
+    ,2em 5em 0 0 $gray
+    ,3em 6em 0 0 $gray
+    ,2em 6em 0 0 $green
+    ,1em 6em 0 0 $red
+    ,0 6em 0 0 $green
+    ,-1em 6em 0 0 $green
+    ,-2em 6em 0 0 $green
+    ,-3em 6em 0 0 $gray
+    ,-2em 7em 0 0 $gray
+    ,-1em 7em 0 0 $green
+    ,0 7em 0 0 $darkerGreen
+    ,1em 7em 0 0 $green
+    ,2em 7em 0 0 $gray
+    ,3em 8em 0 0 $gray
+    ,2em 8em 0 0 $green
+    ,1em 8em 0 0 $darkerGreen
+    ,0 8em 0 0 $green
+    ,-1em 8em 0 0 $darkerGreen
+    ,-2em 8em 0 0 $green
+    ,-3em 8em 0 0 $gray
+    ,-4em 9em 0 0 $gray
+    ,-3em 9em 0 0 $green
+    ,-2em 9em 0 0 $red
+    ,-1em 9em 0 0 $green
+    ,0 9em 0 0 $green
+    ,1em 9em 0 0 $green
+    ,2em 9em 0 0 $blue
+    ,3em 9em 0 0 $green
+    ,4em 9em 0 0 $gray
+    ,3em 10em 0 0 $gray
+    ,2em 10em 0 0 $green
+    ,1em 10em 0 0 $darkerGreen
+    ,0 10em 0 0 $green
+    ,-1em 10em 0 0 $darkerGreen
+    ,-2em 10em 0 0 $green
+    ,-3em 10em 0 0 $gray
+    ,-4em 11em 0 0 $gray
+    ,-3em 11em 0 0 $green
+    ,-2em 11em 0 0 $darkerGreen
+    ,-1em 11em 0 0 $green
+    ,0 11em 0 0 $darkerGreen
+    ,1em 11em 0 0 $green
+    ,2em 11em 0 0 $darkerGreen
+    ,3em 11em 0 0 $green
+    ,4em 11em 0 0 $gray
+    ,5em 12em 0 0 $gray
+    ,4em 12em 0 0 $green
+    ,3em 12em 0 0 $green
+    ,2em 12em 0 0 $green
+    ,1em 12em 0 0 $green
+    ,0 12em 0 0 $green
+    ,-1em 12em 0 0 $green
+    ,-2em 12em 0 0 $green
+    ,-3em 12em 0 0 $green
+    ,-4em 12em 0 0 $green
+    ,-5em 12em 0 0 $gray
+    ,-4em 13em 0 0 $gray
+    ,-3em 13em 0 0 $green
+    ,-2em 13em 0 0 $green
+    ,-1em 13em 0 0 $blue
+    ,0 13em 0 0 $green
+    ,1em 13em 0 0 $green
+    ,2em 13em 0 0 $red
+    ,3em 13em 0 0 $green
+    ,4em 13em 0 0 $gray
+    ,3em 14em 0 0 $gray
+    ,2em 14em 0 0 $gray
+    ,1em 14em 0 0 $gray
+    ,0 14em 0 0 $tan
+    ,-1em 14em 0 0 $gray
+    ,-2em 14em 0 0 $gray
+    ,-3em 14em 0 0 $gray
+    ,-1em 15em 0 0 $gray
+    ,0 15em 0 0 $gray
+    ,1em 15em 0 0 $gray
+    ;
+  }
+  100% {
+    box-shadow:
+    0 3em 0 0 $gray
+    ,1em 4em 0 0 $gray
+    ,0 4em 0 0 $green
+    ,-1em 4em 0 0 $gray
+    ,-2em 5em 0 0 $gray
+    ,-1em 5em 0 0 $blue
+    ,0 5em 0 0 $green
+    ,1em 5em 0 0 $green
+    ,2em 5em 0 0 $gray
+    ,3em 6em 0 0 $gray
+    ,2em 6em 0 0 $green
+    ,1em 6em 0 0 $red
+    ,0 6em 0 0 $green
+    ,-1em 6em 0 0 $green
+    ,-2em 6em 0 0 $green
+    ,-3em 6em 0 0 $gray
+    ,-2em 7em 0 0 $gray
+    ,-1em 7em 0 0 $green
+    ,0 7em 0 0 $darkerGreen
+    ,1em 7em 0 0 $green
+    ,2em 7em 0 0 $gray
+    ,3em 8em 0 0 $gray
+    ,2em 8em 0 0 $green
+    ,1em 8em 0 0 $darkerGreen
+    ,0 8em 0 0 $green
+    ,-1em 8em 0 0 $darkerGreen
+    ,-2em 8em 0 0 $green
+    ,-3em 8em 0 0 $gray
+    ,-4em 9em 0 0 $gray
+    ,-3em 9em 0 0 $green
+    ,-2em 9em 0 0 $red
+    ,-1em 9em 0 0 $green
+    ,0 9em 0 0 $darkerYellow
+    ,1em 9em 0 0 $green
+    ,2em 9em 0 0 $blue
+    ,3em 9em 0 0 $green
+    ,4em 9em 0 0 $gray
+    ,3em 10em 0 0 $gray
+    ,2em 10em 0 0 $green
+    ,1em 10em 0 0 $darkerGreen
+    ,0 10em 0 0 $green
+    ,-1em 10em 0 0 $darkerGreen
+    ,-2em 10em 0 0 $green
+    ,-3em 10em 0 0 $gray
+    ,-4em 11em 0 0 $gray
+    ,-3em 11em 0 0 $green
+    ,-2em 11em 0 0 $darkerGreen
+    ,-1em 11em 0 0 $green
+    ,0 11em 0 0 $darkerGreen
+    ,1em 11em 0 0 $green
+    ,2em 11em 0 0 $darkerGreen
+    ,3em 11em 0 0 $darkerYellow
+    ,4em 11em 0 0 $gray
+    ,5em 12em 0 0 $gray
+    ,4em 12em 0 0 $green
+    ,3em 12em 0 0 $green
+    ,2em 12em 0 0 $green
+    ,1em 12em 0 0 $green
+    ,0 12em 0 0 $green
+    ,-1em 12em 0 0 $green
+    ,-2em 12em 0 0 $green
+    ,-3em 12em 0 0 $green
+    ,-4em 12em 0 0 $green
+    ,-5em 12em 0 0 $gray
+    ,-4em 13em 0 0 $gray
+    ,-3em 13em 0 0 $darkerYellow
+    ,-2em 13em 0 0 $green
+    ,-1em 13em 0 0 $blue
+    ,0 13em 0 0 $green
+    ,1em 13em 0 0 $green
+    ,2em 13em 0 0 $red
+    ,3em 13em 0 0 $green
+    ,4em 13em 0 0 $gray
+    ,3em 14em 0 0 $gray
+    ,2em 14em 0 0 $gray
+    ,1em 14em 0 0 $gray
+    ,0 14em 0 0 $tan
+    ,-1em 14em 0 0 $gray
+    ,-2em 14em 0 0 $gray
+    ,-3em 14em 0 0 $gray
+    ,-1em 15em 0 0 $gray
+    ,0 15em 0 0 $gray
+    ,1em 15em 0 0 $gray
+    ;
+  }
 }

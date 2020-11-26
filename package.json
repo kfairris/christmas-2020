@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/kfairris/christmas-2020#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.13"
-  }
+    "browser-sync": "^2.26.13",
+    "compass-mixins": "^0.12.10",
+    "rellax": "^1.12.1"
+  },
+  "dependencies": {}
 }

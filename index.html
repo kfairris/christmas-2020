@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="fullpage.css" /> -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,17 +21,23 @@
             <div id="sitename">
                 <h1><a href="#home">Merry Christmas!!!</a></h1>
             </div>
-            <nav>
-                <ul id="menu">
-                    <li data-menuanchor="emma"><a href="#emma" class="menu_item" id="link-emma"> Emma</a></li>
-                    <li data-menuanchor="grant"><a href="#grant" class="menu_item" id="link-grant"> Grant</a></li>
-                    <li data-menuanchor="timothy"><a href="#timothy" class="menu_item" id="link-timothy"> Timothy</a>
+            <div class="hamburger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav aria-label="Main menu">
+                <ul class="nav-links">
+                    <li class="menu_item" data-menuanchor="emma"><a href="#home" id="link-home">Home</a></li>
+                    <li class="menu_item" data-menuanchor="emma"><a href="#emma" id="link-emma">Emma</a></li>
+                    <li class="menu_item" data-menuanchor="grant"><a href="#grant" id="link-grant">Grant</a></li>
+                    <li class="menu_item" data-menuanchor="timothy"><a href="#timothy" id="link-timothy">Timothy</a>
                     </li>
-                    <li data-menuanchor="kennyalee"><a href="#kennyalee" class="menu_item" id="link-kennyalee">
-                        Kenny+Alee</a></li>                    
-                    <li data-menuanchor="trooper"><a href="#trooper" class="menu_item" id="link-trooper"> Trooper</a>
+                    <li class="menu_item" data-menuanchor="kennyalee"><a href="#kennyalee"
+                            id="link-kennyalee">Kenny+Alee</a></li>
+                    <li class="menu_item" data-menuanchor="trooper"><a href="#trooper" id="link-trooper">Trooper</a>
                     </li>
-                    <li data-menuanchor="footer"><a href="#footer" class="menu_item" id="link-footer"> Connect</a>
+                    <li class="menu_item" data-menuanchor="footer"><a href="#footer" id="link-footer">Connect</a>
                     </li>
 
                 </ul>
@@ -46,158 +53,161 @@
             <li class="mode5 mode"></li>
         </ul>
     </div> -->
-        <section id="home" class="section">
-            <div class="content">
-                <div class="photo">
-                    <img src="images/fairris-family.jpg" alt="Fairris family">
-                </div>
-                <div class="text">
-                    <h2>The Fairris Family</h2>
-                    <p>2020 has been a different kind of year hasn't it?</p>
-                </div>
+    <section id="home" class="section">
+        <div class="content">
+            <div class="photo">
+                <img src="images/fairris-family.jpg" alt="Fairris family">
             </div>
-            <div class="break"></div>
-            <div class="unsplash">
-                <span>Photo by <a
-                        href="https://unsplash.com/@anniespratt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Annie
-                        Spratt</a> on <a
-                        href="https://unsplash.com/backgrounds/events/christmas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+            <div class="text">
+                <h2>The Fairris Family</h2>
+                <p>2020 has been a different kind of year hasn't it?</p>
             </div>
-        </section>
-        <section id="emma" class="section cards">
-            <div class="content">
-                <div class="photo">
-                    <img src="images/emma.jpg" alt="Emma">
-                </div>
-                <div class="text">
-                    <h2>Emma</h2>
-                    <p>Emma started 6th grade and middle school. She's taking dance and has started playing clarinet in
-                        the school band.</p>
-                    <h3>Christmas Favorites</h3>
-                    <ul>
-                        <li>Movie: </li>
-                        <li>Song: </li>
-                        <li>Tradition: </li>
-                    </ul>
-                </div>
+        </div>
+        <div class="break"></div>
+        <div class="unsplash">
+            <span>Photo by <a
+                    href="https://unsplash.com/@anniespratt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Annie
+                    Spratt</a> on <a
+                    href="https://unsplash.com/backgrounds/events/christmas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+    </section>
+    <div class="divider">
+        <div class="xmasTree"></div>
+    </div>
+    <section id="emma" class="section cards">
+        <div class="content">
+            <div class="photo">
+                <img src="images/emma.jpg" alt="Emma">
             </div>
-            <div class="break"></div>
-            <div class="unsplash"><span>Photo by <a
-                        href="https://unsplash.com/@epw615?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">erin
-                        mckenna</a> on <a
-                        href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+            <div class="text">
+                <h2>Emma</h2>
+                <p>Emma started 6th grade and middle school. She's taking dance and has started playing clarinet in
+                    the school band.</p>
+                <h3>Christmas Favorites</h3>
+                <ul>
+                    <li>Movie: </li>
+                    <li>Song: </li>
+                    <li>Tradition: </li>
+                </ul>
             </div>
-        </section>
-        <section id="grant" class="section cards">
-            <div class="content">
-                <div class="photo">
-                    <img src="images/grant.jpg" alt="Grant">
-                </div>
-                <div class="text">
-                    <h2>Grant</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam magnam dolorem dolore. Magni
-                        doloribus aliquam
-                        quam quisquam repudiandae tempora eligendi consectetur? Odit unde repellat nihil delectus labore
-                        nemo earum, dolorem
-                        possimus aperiam maiores vitae fuga voluptatibus at a, commodi maxime natus? Nobis assumenda eum
-                        dolorem in, velit
-                        numquam commodi.</p>
-                    <h3>Christmas Favorites</h3>
-                    <ul>
-                        <li>Movie: </li>
-                        <li>Song: </li>
-                        <li>Tradition: </li>
-                    </ul>
+        </div>
+        <div class="break"></div>
+        <div class="unsplash"><span>Photo by <a
+                    href="https://unsplash.com/@epw615?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">erin
+                    mckenna</a> on <a
+                    href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+    </section>
+    <section id="grant" class="section cards">
+        <div class="content">
+            <div class="photo">
+                <img src="images/grant.jpg" alt="Grant">
+            </div>
+            <div class="text">
+                <h2>Grant</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam magnam dolorem dolore. Magni
+                    doloribus aliquam
+                    quam quisquam repudiandae tempora eligendi consectetur? Odit unde repellat nihil delectus labore
+                    nemo earum, dolorem
+                    possimus aperiam maiores vitae fuga voluptatibus at a, commodi maxime natus? Nobis assumenda eum
+                    dolorem in, velit
+                    numquam commodi.</p>
+                <h3>Christmas Favorites</h3>
+                <ul>
+                    <li>Movie: </li>
+                    <li>Song: </li>
+                    <li>Tradition: </li>
+                </ul>
 
-                </div>
             </div>
-            <div class="break"></div>
-            <div class="unsplash">
-                <span>Photo by <a
-                        href="https://unsplash.com/@prochurchmedia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pro
-                        Church Media</a> on <a
-                        href="https://unsplash.com/backgrounds/events/christmas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+        <div class="break"></div>
+        <div class="unsplash">
+            <span>Photo by <a
+                    href="https://unsplash.com/@prochurchmedia?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Pro
+                    Church Media</a> on <a
+                    href="https://unsplash.com/backgrounds/events/christmas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+    </section>
+    <section id="timothy" class="section cards">
+        <div class="content">
+            <div class="photo">
+                <img src="images/timothy.jpg" alt="Timothy">
             </div>
-        </section>
-        <section id="timothy" class="section cards">
-            <div class="content">
-                <div class="photo">
-                    <img src="images/timothy.jpg" alt="Timothy">
-                </div>
-                <div class="text">
-                    <h2>Timothy</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam magnam dolorem dolore. Magni
-                        doloribus aliquam
-                        quam quisquam repudiandae tempora eligendi consectetur? Odit unde repellat nihil delectus labore
-                        nemo earum, dolorem
-                        possimus aperiam maiores vitae fuga voluptatibus at a, commodi maxime natus? Nobis assumenda eum
-                        dolorem in, velit
-                        numquam commodi.</p>
-                    <h3>Christmas Favorites</h3>
-                    <ul>
-                        <li>Movie: </li>
-                        <li>Song: </li>
-                        <li>Tradition: </li>
-                    </ul>
+            <div class="text">
+                <h2>Timothy</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam magnam dolorem dolore. Magni
+                    doloribus aliquam
+                    quam quisquam repudiandae tempora eligendi consectetur? Odit unde repellat nihil delectus labore
+                    nemo earum, dolorem
+                    possimus aperiam maiores vitae fuga voluptatibus at a, commodi maxime natus? Nobis assumenda eum
+                    dolorem in, velit
+                    numquam commodi.</p>
+                <h3>Christmas Favorites</h3>
+                <ul>
+                    <li>Movie: </li>
+                    <li>Song: </li>
+                    <li>Tradition: </li>
+                </ul>
 
-                </div>
             </div>
-            <div class="break"></div>
-            <div class="unsplash">
-                <span>Photo by <a
-                        href="https://unsplash.com/@miroslava?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Miroslava</a>
-                    on <a
-                        href="https://unsplash.com/s/photos/christmas-background-cookies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-            </div>
+        </div>
+        <div class="break"></div>
+        <div class="unsplash">
+            <span>Photo by <a
+                    href="https://unsplash.com/@miroslava?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Miroslava</a>
+                on <a
+                    href="https://unsplash.com/s/photos/christmas-background-cookies?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
 
-        </section>
-        <section id="kennyalee" class="section cards">
-            <div class="content">
-                <div class="photo">
-                    <img src="images/kenny-alee.jpg" alt="Kenny and Alee">
-                </div>
-                <div class="text">
-                    <h2>Kenny and Alee</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, officia optio numquam labore,
-                        ipsum ipsam tempora et fugiat incidunt, praesentium molestiae harum quae veniam architecto.</p>
-                    <h3>Christmas Favorites</h3>
-                    <ul>
-                        <li>Movie: </li>
-                        <li>Song: </li>
-                        <li>Tradition: </li>
-                    </ul>
+    </section>
+    <section id="kennyalee" class="section cards">
+        <div class="content">
+            <div class="photo">
+                <img src="images/kenny-alee.jpg" alt="Kenny and Alee">
+            </div>
+            <div class="text">
+                <h2>Kenny and Alee</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, officia optio numquam labore,
+                    ipsum ipsam tempora et fugiat incidunt, praesentium molestiae harum quae veniam architecto.</p>
+                <h3>Christmas Favorites</h3>
+                <ul>
+                    <li>Movie: </li>
+                    <li>Song: </li>
+                    <li>Tradition: </li>
+                </ul>
 
-                </div>
             </div>
-            <div class="break"></div>
-            <div class="unsplash"><span>Photo by <a
-                        href="https://unsplash.com/@downtoearthnurse?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sarah
-                        Vombrack</a> on <a
-                        href="https://unsplash.com/backgrounds/events/christmas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-            </div>
-        </section>
+        </div>
+        <div class="break"></div>
+        <div class="unsplash"><span>Photo by <a
+                    href="https://unsplash.com/@downtoearthnurse?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sarah
+                    Vombrack</a> on <a
+                    href="https://unsplash.com/backgrounds/events/christmas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+        </div>
+    </section>
 
-        <section id="trooper" class="section cards">
-            <div class="content">
-                <div class="photo">
-                    <img src="images/trooper-meme.jpg" alt="Trooper">
-                </div>
-                <div class="text">
-                    <h2>Trooper</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam magnam dolorem dolore. Magni
-                        doloribus aliquam
-                        quam quisquam repudiandae tempora eligendi consectetur? Odit unde repellat nihil delectus labore
-                        nemo earum, dolorem
-                        possimus aperiam maiores vitae fuga voluptatibus at a, commodi maxime natus? Nobis assumenda eum
-                        dolorem in, velit
-                        numquam commodi.</p>
-                </div>
+    <section id="trooper" class="section cards">
+        <div class="content">
+            <div class="photo">
+                <img src="images/trooper-meme.jpg" alt="Trooper">
             </div>
-            <div class="break"></div>
-            <div class="unsplash">
-                <span>PLACEHOLDER</span>
+            <div class="text">
+                <h2>Trooper</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam totam magnam dolorem dolore. Magni
+                    doloribus aliquam
+                    quam quisquam repudiandae tempora eligendi consectetur? Odit unde repellat nihil delectus labore
+                    nemo earum, dolorem
+                    possimus aperiam maiores vitae fuga voluptatibus at a, commodi maxime natus? Nobis assumenda eum
+                    dolorem in, velit
+                    numquam commodi.</p>
             </div>
-        </section>
+        </div>
+        <div class="break"></div>
+        <div class="unsplash">
+            <span>PLACEHOLDER</span>
+        </div>
+    </section>
     <footer id="footer" class="section cards">
         <div class="info">
             <h3>Footer Links</h3>
@@ -222,7 +232,7 @@
     <script type="text/javascript" src="common.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -230,7 +240,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <script id="__bs_script__">//<![CDATA[
         document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));
     //]]></script>
