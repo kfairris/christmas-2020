@@ -2,9 +2,11 @@
 
 //Variables
 
-$red: #eb0000;
-$darkerGreen: #2d8434;
-$darkerBlue: #00378f;
+$red2: #a81817;
+$green2: #344d2f;
+$paleYellow: #ffc64d;
+$gray: #f0f4f7;
+$darkerGray: #c8beb9;
 
 // @font-face {
 //     font-family: 'ChristmasJumper';
@@ -30,7 +32,7 @@ ul {
     padding: 0;
 }
 header {
-    background-color: #cccccc;
+    background-color: $gray;
     position: sticky;
     top: 0;
     // height: 85px;
@@ -46,7 +48,7 @@ header .wrapper {
 h1,
 h2,
 h3 {
-    font-family: "ChristmasJumper", "Mountains of Christmas", serif;
+    font-family: "Mountains of Christmas", serif;
 }
 h1 {
     font-size: 2em;
@@ -103,10 +105,11 @@ nav ul li {
     background-image: url(images/timothy-bg.jpg);
 }
 #trooper {
-    background-color: darkgreen;
+    background-image: url(images/trooper-bg.jpg);
 }
 section {
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,10 +118,7 @@ section {
     display: flex;
     flex-flow: row wrap;
     padding-top: 66px; /* fixed header height*/
-    margin: -66px 0 66px; /* negative fixed header height */
-}
-.section > * {
-    border: 0 solid red;
+    // margin: -66px 0 66px; /* negative fixed header height */
 }
 .blur {
     height: 100%;
@@ -132,7 +132,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    ul{
+    ul {
         padding-left: 10px;
     }
     li {
@@ -161,7 +161,7 @@ section {
 }
 .text {
     padding: 2em;
-    background-color: rgba(190, 190, 190, 0.5);
+    background-color: rgba(208, 208, 208, 0.78);
 }
 
 .unsplash {
@@ -169,12 +169,12 @@ section {
     text-align: right;
     align-self: flex-end;
     margin-left: auto;
-    color: #cccccc;
+    color: $gray;
     a {
-        color: #cccccc;
+        color: $gray;
     }
     a:hover {
-        color: #cccccc;
+        color: $gray;
         text-decoration: underline;
     }
     span {
@@ -183,29 +183,49 @@ section {
     }
 }
 .divider {
-    height: 45vh;
+    height: 150px;
     width: 100%;
 }
 .red {
-    background-color: $red;
+    background-color: $red2;
 }
 .green {
-    background-color: $darkerGreen;
+    background-color: $green2;
 }
-
+.yellow {
+    background-color: $paleYellow;
+}
 footer {
+    background-color: $gray;
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size: 2em;
+        }
+        a {
+            padding: 0 15px;
+        }
+    }
     // position: sticky;
     // bottom: 0;
-    background-image: url(images/jesus-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 86%;
-    display: flex;
-    align-content: center;
+    // background-image: url(images/jesus-bg.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 100% 86%;
+    // display: flex;
+    // align-content: center;
 }
-footer > * {
-    flex: 1;
-}
+// footer > * {
+//     flex: 1;
+// }
 
 /* Parallax */
 
@@ -370,7 +390,7 @@ footer > * {
     // }
 }
 
-// trying new toggle
+// new toggle
 
 .nav-links {
     position: fixed;
@@ -386,7 +406,7 @@ footer > * {
     text-align: center;
     transform: translateX(100%);
     transition: transform 0.2s ease-in;
-    background-color: rgba(56, 56, 56, 0.5);
+    background-color: $red2;
     justify-content: space-around;
     padding: 15px 2px;
 }
@@ -455,7 +475,7 @@ footer > * {
 //xmastree
 //@import "compass/css3";
 
-$gray: #4b4b4b;
+// $gray: #4b4b4b;
 $yellow: #f5cd2d;
 $blue: #96cbcf;
 $darkerYellow: #d8ba00;
@@ -528,24 +548,26 @@ $tan: #aa782c;
     position: relative;
     top: 15%;
     left: 50%;
-    transform: scale(0.5);
-    box-shadow: 0 3em 0 0 $gray, 1em 4em 0 0 $gray, 0 4em 0 0 $green, -1em 4em 0 0 $gray, -2em 5em 0 0 $gray,
-        -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $gray, 3em 6em 0 0 $gray,
-        2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green, -2em 6em 0 0 $green,
-        -3em 6em 0 0 $gray, -2em 7em 0 0 $gray, -1em 7em 0 0 $green, 0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green,
-        2em 7em 0 0 $gray, 3em 8em 0 0 $gray, 2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green,
-        -1em 8em 0 0 $darkerGreen, -2em 8em 0 0 $green, -3em 8em 0 0 $gray, -4em 9em 0 0 $gray, -3em 9em 0 0 $green,
-        -2em 9em 0 0 $red, -1em 9em 0 0 $green, 0 9em 0 0 $darkerYellow, 1em 9em 0 0 $green, 2em 9em 0 0 $blue,
-        3em 9em 0 0 $green, 4em 9em 0 0 $gray, 3em 10em 0 0 $gray, 2em 10em 0 0 $green, 1em 10em 0 0 $darkerGreen,
-        0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green, -3em 10em 0 0 $gray, -4em 11em 0 0 $gray,
+    transform: scale(0.3);
+    box-shadow: 0 3em 0 0 $darkerGray, 1em 4em 0 0 $darkerGray, 0 4em 0 0 $green, -1em 4em 0 0 $darkerGray,
+        -2em 5em 0 0 $darkerGray, -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $darkerGray,
+        3em 6em 0 0 $darkerGray, 2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green,
+        -2em 6em 0 0 $green, -3em 6em 0 0 $darkerGray, -2em 7em 0 0 $darkerGray, -1em 7em 0 0 $green,
+        0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green, 2em 7em 0 0 $darkerGray, 3em 8em 0 0 $darkerGray, 2em 8em 0 0 $green,
+        1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green, -1em 8em 0 0 $darkerGreen, -2em 8em 0 0 $green,
+        -3em 8em 0 0 $darkerGray, -4em 9em 0 0 $darkerGray, -3em 9em 0 0 $green, -2em 9em 0 0 $red, -1em 9em 0 0 $green,
+        0 9em 0 0 $darkerYellow, 1em 9em 0 0 $green, 2em 9em 0 0 $blue, 3em 9em 0 0 $green, 4em 9em 0 0 $darkerGray,
+        3em 10em 0 0 $darkerGray, 2em 10em 0 0 $green, 1em 10em 0 0 $darkerGreen, 0 10em 0 0 $green,
+        -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green, -3em 10em 0 0 $darkerGray, -4em 11em 0 0 $darkerGray,
         -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen, -1em 11em 0 0 $green, 0 11em 0 0 $darkerGreen,
-        1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen, 3em 11em 0 0 $darkerYellow, 4em 11em 0 0 $gray,
-        5em 12em 0 0 $gray, 4em 12em 0 0 $green, 3em 12em 0 0 $green, 2em 12em 0 0 $green, 1em 12em 0 0 $green,
+        1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen, 3em 11em 0 0 $darkerYellow, 4em 11em 0 0 $darkerGray,
+        5em 12em 0 0 $darkerGray, 4em 12em 0 0 $green, 3em 12em 0 0 $green, 2em 12em 0 0 $green, 1em 12em 0 0 $green,
         0 12em 0 0 $green, -1em 12em 0 0 $green, -2em 12em 0 0 $green, -3em 12em 0 0 $green, -4em 12em 0 0 $green,
-        -5em 12em 0 0 $gray, -4em 13em 0 0 $gray, -3em 13em 0 0 $darkerYellow, -2em 13em 0 0 $green, -1em 13em 0 0 $blue,
-        0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red, 3em 13em 0 0 $green, 4em 13em 0 0 $gray,
-        3em 14em 0 0 $gray, 2em 14em 0 0 $gray, 1em 14em 0 0 $gray, 0 14em 0 0 $tan, -1em 14em 0 0 $gray,
-        -2em 14em 0 0 $gray, -3em 14em 0 0 $gray, -1em 15em 0 0 $gray, 0 15em 0 0 $gray, 1em 15em 0 0 $gray;
+        -5em 12em 0 0 $darkerGray, -4em 13em 0 0 $darkerGray, -3em 13em 0 0 $darkerYellow, -2em 13em 0 0 $green,
+        -1em 13em 0 0 $blue, 0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red, 3em 13em 0 0 $green,
+        4em 13em 0 0 $darkerGray, 3em 14em 0 0 $darkerGray, 2em 14em 0 0 $darkerGray, 1em 14em 0 0 $darkerGray,
+        0 14em 0 0 $tan, -1em 14em 0 0 $darkerGray, -2em 14em 0 0 $darkerGray, -3em 14em 0 0 $darkerGray,
+        -1em 15em 0 0 $darkerGray, 0 15em 0 0 $darkerGray, 1em 15em 0 0 $darkerGray;
 }
 
 /*Keyframes*/
@@ -560,84 +582,92 @@ $tan: #aa782c;
 
 @include keyframes(xmasTree) {
     25% {
-        box-shadow: 0 3em 0 0 $gray, 1em 4em 0 0 $gray, 0 4em 0 0 $green, -1em 4em 0 0 $gray, -2em 5em 0 0 $gray,
-            -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $gray, 3em 6em 0 0 $gray,
-            2em 6em 0 0 $green, 1em 6em 0 0 $green, 0 6em 0 0 $green, -1em 6em 0 0 $green, -2em 6em 0 0 $green,
-            -3em 6em 0 0 $gray, -2em 7em 0 0 $gray, -1em 7em 0 0 $green, 0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green,
-            2em 7em 0 0 $gray, 3em 8em 0 0 $gray, 2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green,
-            -1em 8em 0 0 $darkerGreen, -2em 8em 0 0 $green, -3em 8em 0 0 $gray, -4em 9em 0 0 $gray, -3em 9em 0 0 $green,
+        box-shadow: 0 3em 0 0 $darkerGray, 1em 4em 0 0 $darkerGray, 0 4em 0 0 $green, -1em 4em 0 0 $darkerGray,
+            -2em 5em 0 0 $darkerGray, -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $darkerGray,
+            3em 6em 0 0 $darkerGray, 2em 6em 0 0 $green, 1em 6em 0 0 $green, 0 6em 0 0 $green, -1em 6em 0 0 $green,
+            -2em 6em 0 0 $green, -3em 6em 0 0 $darkerGray, -2em 7em 0 0 $darkerGray, -1em 7em 0 0 $green,
+            0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green, 2em 7em 0 0 $darkerGray, 3em 8em 0 0 $darkerGray,
+            2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green, -1em 8em 0 0 $darkerGreen,
+            -2em 8em 0 0 $green, -3em 8em 0 0 $darkerGray, -4em 9em 0 0 $darkerGray, -3em 9em 0 0 $green,
             -2em 9em 0 0 $green, -1em 9em 0 0 $green, 0 9em 0 0 $darkerYellow, 1em 9em 0 0 $green, 2em 9em 0 0 $blue,
-            3em 9em 0 0 $green, 4em 9em 0 0 $gray, 3em 10em 0 0 $gray, 2em 10em 0 0 $green, 1em 10em 0 0 $darkerGreen,
-            0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green, -3em 10em 0 0 $gray,
-            -4em 11em 0 0 $gray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen, -1em 11em 0 0 $green,
-            0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen, 3em 11em 0 0 $darkerYellow,
-            4em 11em 0 0 $gray, 5em 12em 0 0 $gray, 4em 12em 0 0 $green, 3em 12em 0 0 $green, 2em 12em 0 0 $green,
-            1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green, -2em 12em 0 0 $green, -3em 12em 0 0 $green,
-            -4em 12em 0 0 $green, -5em 12em 0 0 $gray, -4em 13em 0 0 $gray, -3em 13em 0 0 $darkerYellow,
-            -2em 13em 0 0 $green, -1em 13em 0 0 $blue, 0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $green,
-            3em 13em 0 0 $green, 4em 13em 0 0 $gray, 3em 14em 0 0 $gray, 2em 14em 0 0 $gray, 1em 14em 0 0 $gray,
-            0 14em 0 0 $tan, -1em 14em 0 0 $gray, -2em 14em 0 0 $gray, -3em 14em 0 0 $gray, -1em 15em 0 0 $gray,
-            0 15em 0 0 $gray, 1em 15em 0 0 $gray;
+            3em 9em 0 0 $green, 4em 9em 0 0 $darkerGray, 3em 10em 0 0 $darkerGray, 2em 10em 0 0 $green,
+            1em 10em 0 0 $darkerGreen, 0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green,
+            -3em 10em 0 0 $darkerGray, -4em 11em 0 0 $darkerGray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen,
+            -1em 11em 0 0 $green, 0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen,
+            3em 11em 0 0 $darkerYellow, 4em 11em 0 0 $darkerGray, 5em 12em 0 0 $darkerGray, 4em 12em 0 0 $green,
+            3em 12em 0 0 $green, 2em 12em 0 0 $green, 1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green,
+            -2em 12em 0 0 $green, -3em 12em 0 0 $green, -4em 12em 0 0 $green, -5em 12em 0 0 $darkerGray,
+            -4em 13em 0 0 $darkerGray, -3em 13em 0 0 $darkerYellow, -2em 13em 0 0 $green, -1em 13em 0 0 $blue,
+            0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $green, 3em 13em 0 0 $green, 4em 13em 0 0 $darkerGray,
+            3em 14em 0 0 $darkerGray, 2em 14em 0 0 $darkerGray, 1em 14em 0 0 $darkerGray, 0 14em 0 0 $tan,
+            -1em 14em 0 0 $darkerGray, -2em 14em 0 0 $darkerGray, -3em 14em 0 0 $darkerGray, -1em 15em 0 0 $darkerGray,
+            0 15em 0 0 $darkerGray, 1em 15em 0 0 $darkerGray;
     }
 
     50% {
-        box-shadow: 0 3em 0 0 $gray, 1em 4em 0 0 $gray, 0 4em 0 0 $green, -1em 4em 0 0 $gray, -2em 5em 0 0 $gray,
-            -1em 5em 0 0 $green, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $gray, 3em 6em 0 0 $gray,
-            2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green, -2em 6em 0 0 $green,
-            -3em 6em 0 0 $gray, -2em 7em 0 0 $gray, -1em 7em 0 0 $green, 0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green,
-            2em 7em 0 0 $gray, 3em 8em 0 0 $gray, 2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green,
-            -1em 8em 0 0 $darkerGreen, -2em 8em 0 0 $green, -3em 8em 0 0 $gray, -4em 9em 0 0 $gray, -3em 9em 0 0 $green,
+        box-shadow: 0 3em 0 0 $darkerGray, 1em 4em 0 0 $darkerGray, 0 4em 0 0 $green, -1em 4em 0 0 $darkerGray,
+            -2em 5em 0 0 $darkerGray, -1em 5em 0 0 $green, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $darkerGray,
+            3em 6em 0 0 $darkerGray, 2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green,
+            -2em 6em 0 0 $green, -3em 6em 0 0 $darkerGray, -2em 7em 0 0 $darkerGray, -1em 7em 0 0 $green,
+            0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green, 2em 7em 0 0 $darkerGray, 3em 8em 0 0 $darkerGray,
+            2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green, -1em 8em 0 0 $darkerGreen,
+            -2em 8em 0 0 $green, -3em 8em 0 0 $darkerGray, -4em 9em 0 0 $darkerGray, -3em 9em 0 0 $green,
             -2em 9em 0 0 $red, -1em 9em 0 0 $green, 0 9em 0 0 $darkerYellow, 1em 9em 0 0 $green, 2em 9em 0 0 $green,
-            3em 9em 0 0 $green, 4em 9em 0 0 $gray, 3em 10em 0 0 $gray, 2em 10em 0 0 $green, 1em 10em 0 0 $darkerGreen,
-            0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green, -3em 10em 0 0 $gray,
-            -4em 11em 0 0 $gray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen, -1em 11em 0 0 $green,
-            0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen, 3em 11em 0 0 $darkerYellow,
-            4em 11em 0 0 $gray, 5em 12em 0 0 $gray, 4em 12em 0 0 $green, 3em 12em 0 0 $green, 2em 12em 0 0 $green,
-            1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green, -2em 12em 0 0 $green, -3em 12em 0 0 $green,
-            -4em 12em 0 0 $green, -5em 12em 0 0 $gray, -4em 13em 0 0 $gray, -3em 13em 0 0 $darkerYellow,
-            -2em 13em 0 0 $green, -1em 13em 0 0 $green, 0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red,
-            3em 13em 0 0 $green, 4em 13em 0 0 $gray, 3em 14em 0 0 $gray, 2em 14em 0 0 $gray, 1em 14em 0 0 $gray,
-            0 14em 0 0 $tan, -1em 14em 0 0 $gray, -2em 14em 0 0 $gray, -3em 14em 0 0 $gray, -1em 15em 0 0 $gray,
-            0 15em 0 0 $gray, 1em 15em 0 0 $gray;
+            3em 9em 0 0 $green, 4em 9em 0 0 $darkerGray, 3em 10em 0 0 $darkerGray, 2em 10em 0 0 $green,
+            1em 10em 0 0 $darkerGreen, 0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green,
+            -3em 10em 0 0 $darkerGray, -4em 11em 0 0 $darkerGray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen,
+            -1em 11em 0 0 $green, 0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen,
+            3em 11em 0 0 $darkerYellow, 4em 11em 0 0 $darkerGray, 5em 12em 0 0 $darkerGray, 4em 12em 0 0 $green,
+            3em 12em 0 0 $green, 2em 12em 0 0 $green, 1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green,
+            -2em 12em 0 0 $green, -3em 12em 0 0 $green, -4em 12em 0 0 $green, -5em 12em 0 0 $darkerGray,
+            -4em 13em 0 0 $darkerGray, -3em 13em 0 0 $darkerYellow, -2em 13em 0 0 $green, -1em 13em 0 0 $green,
+            0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red, 3em 13em 0 0 $green, 4em 13em 0 0 $darkerGray,
+            3em 14em 0 0 $darkerGray, 2em 14em 0 0 $darkerGray, 1em 14em 0 0 $darkerGray, 0 14em 0 0 $tan,
+            -1em 14em 0 0 $darkerGray, -2em 14em 0 0 $darkerGray, -3em 14em 0 0 $darkerGray, -1em 15em 0 0 $darkerGray,
+            0 15em 0 0 $darkerGray, 1em 15em 0 0 $darkerGray;
     }
     75% {
-        box-shadow: 0 3em 0 0 $gray, 1em 4em 0 0 $gray, 0 4em 0 0 $green, -1em 4em 0 0 $gray, -2em 5em 0 0 $gray,
-            -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $gray, 3em 6em 0 0 $gray,
-            2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green, -2em 6em 0 0 $green,
-            -3em 6em 0 0 $gray, -2em 7em 0 0 $gray, -1em 7em 0 0 $green, 0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green,
-            2em 7em 0 0 $gray, 3em 8em 0 0 $gray, 2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green,
-            -1em 8em 0 0 $darkerGreen, -2em 8em 0 0 $green, -3em 8em 0 0 $gray, -4em 9em 0 0 $gray, -3em 9em 0 0 $green,
+        box-shadow: 0 3em 0 0 $darkerGray, 1em 4em 0 0 $darkerGray, 0 4em 0 0 $green, -1em 4em 0 0 $darkerGray,
+            -2em 5em 0 0 $darkerGray, -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $darkerGray,
+            3em 6em 0 0 $darkerGray, 2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green,
+            -2em 6em 0 0 $green, -3em 6em 0 0 $darkerGray, -2em 7em 0 0 $darkerGray, -1em 7em 0 0 $green,
+            0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green, 2em 7em 0 0 $darkerGray, 3em 8em 0 0 $darkerGray,
+            2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green, -1em 8em 0 0 $darkerGreen,
+            -2em 8em 0 0 $green, -3em 8em 0 0 $darkerGray, -4em 9em 0 0 $darkerGray, -3em 9em 0 0 $green,
             -2em 9em 0 0 $red, -1em 9em 0 0 $green, 0 9em 0 0 $green, 1em 9em 0 0 $green, 2em 9em 0 0 $blue,
-            3em 9em 0 0 $green, 4em 9em 0 0 $gray, 3em 10em 0 0 $gray, 2em 10em 0 0 $green, 1em 10em 0 0 $darkerGreen,
-            0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green, -3em 10em 0 0 $gray,
-            -4em 11em 0 0 $gray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen, -1em 11em 0 0 $green,
-            0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen, 3em 11em 0 0 $green,
-            4em 11em 0 0 $gray, 5em 12em 0 0 $gray, 4em 12em 0 0 $green, 3em 12em 0 0 $green, 2em 12em 0 0 $green,
-            1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green, -2em 12em 0 0 $green, -3em 12em 0 0 $green,
-            -4em 12em 0 0 $green, -5em 12em 0 0 $gray, -4em 13em 0 0 $gray, -3em 13em 0 0 $green, -2em 13em 0 0 $green,
-            -1em 13em 0 0 $blue, 0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red, 3em 13em 0 0 $green,
-            4em 13em 0 0 $gray, 3em 14em 0 0 $gray, 2em 14em 0 0 $gray, 1em 14em 0 0 $gray, 0 14em 0 0 $tan,
-            -1em 14em 0 0 $gray, -2em 14em 0 0 $gray, -3em 14em 0 0 $gray, -1em 15em 0 0 $gray, 0 15em 0 0 $gray,
-            1em 15em 0 0 $gray;
+            3em 9em 0 0 $green, 4em 9em 0 0 $darkerGray, 3em 10em 0 0 $darkerGray, 2em 10em 0 0 $green,
+            1em 10em 0 0 $darkerGreen, 0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green,
+            -3em 10em 0 0 $darkerGray, -4em 11em 0 0 $darkerGray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen,
+            -1em 11em 0 0 $green, 0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen,
+            3em 11em 0 0 $green, 4em 11em 0 0 $darkerGray, 5em 12em 0 0 $darkerGray, 4em 12em 0 0 $green,
+            3em 12em 0 0 $green, 2em 12em 0 0 $green, 1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green,
+            -2em 12em 0 0 $green, -3em 12em 0 0 $green, -4em 12em 0 0 $green, -5em 12em 0 0 $darkerGray,
+            -4em 13em 0 0 $darkerGray, -3em 13em 0 0 $green, -2em 13em 0 0 $green, -1em 13em 0 0 $blue,
+            0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red, 3em 13em 0 0 $green, 4em 13em 0 0 $darkerGray,
+            3em 14em 0 0 $darkerGray, 2em 14em 0 0 $darkerGray, 1em 14em 0 0 $darkerGray, 0 14em 0 0 $tan,
+            -1em 14em 0 0 $darkerGray, -2em 14em 0 0 $darkerGray, -3em 14em 0 0 $darkerGray, -1em 15em 0 0 $darkerGray,
+            0 15em 0 0 $darkerGray, 1em 15em 0 0 $darkerGray;
     }
     100% {
-        box-shadow: 0 3em 0 0 $gray, 1em 4em 0 0 $gray, 0 4em 0 0 $green, -1em 4em 0 0 $gray, -2em 5em 0 0 $gray,
-            -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $gray, 3em 6em 0 0 $gray,
-            2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green, -2em 6em 0 0 $green,
-            -3em 6em 0 0 $gray, -2em 7em 0 0 $gray, -1em 7em 0 0 $green, 0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green,
-            2em 7em 0 0 $gray, 3em 8em 0 0 $gray, 2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green,
-            -1em 8em 0 0 $darkerGreen, -2em 8em 0 0 $green, -3em 8em 0 0 $gray, -4em 9em 0 0 $gray, -3em 9em 0 0 $green,
+        box-shadow: 0 3em 0 0 $darkerGray, 1em 4em 0 0 $darkerGray, 0 4em 0 0 $green, -1em 4em 0 0 $darkerGray,
+            -2em 5em 0 0 $darkerGray, -1em 5em 0 0 $blue, 0 5em 0 0 $green, 1em 5em 0 0 $green, 2em 5em 0 0 $darkerGray,
+            3em 6em 0 0 $darkerGray, 2em 6em 0 0 $green, 1em 6em 0 0 $red, 0 6em 0 0 $green, -1em 6em 0 0 $green,
+            -2em 6em 0 0 $green, -3em 6em 0 0 $darkerGray, -2em 7em 0 0 $darkerGray, -1em 7em 0 0 $green,
+            0 7em 0 0 $darkerGreen, 1em 7em 0 0 $green, 2em 7em 0 0 $darkerGray, 3em 8em 0 0 $darkerGray,
+            2em 8em 0 0 $green, 1em 8em 0 0 $darkerGreen, 0 8em 0 0 $green, -1em 8em 0 0 $darkerGreen,
+            -2em 8em 0 0 $green, -3em 8em 0 0 $darkerGray, -4em 9em 0 0 $darkerGray, -3em 9em 0 0 $green,
             -2em 9em 0 0 $red, -1em 9em 0 0 $green, 0 9em 0 0 $darkerYellow, 1em 9em 0 0 $green, 2em 9em 0 0 $blue,
-            3em 9em 0 0 $green, 4em 9em 0 0 $gray, 3em 10em 0 0 $gray, 2em 10em 0 0 $green, 1em 10em 0 0 $darkerGreen,
-            0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green, -3em 10em 0 0 $gray,
-            -4em 11em 0 0 $gray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen, -1em 11em 0 0 $green,
-            0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen, 3em 11em 0 0 $darkerYellow,
-            4em 11em 0 0 $gray, 5em 12em 0 0 $gray, 4em 12em 0 0 $green, 3em 12em 0 0 $green, 2em 12em 0 0 $green,
-            1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green, -2em 12em 0 0 $green, -3em 12em 0 0 $green,
-            -4em 12em 0 0 $green, -5em 12em 0 0 $gray, -4em 13em 0 0 $gray, -3em 13em 0 0 $darkerYellow,
-            -2em 13em 0 0 $green, -1em 13em 0 0 $blue, 0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red,
-            3em 13em 0 0 $green, 4em 13em 0 0 $gray, 3em 14em 0 0 $gray, 2em 14em 0 0 $gray, 1em 14em 0 0 $gray,
-            0 14em 0 0 $tan, -1em 14em 0 0 $gray, -2em 14em 0 0 $gray, -3em 14em 0 0 $gray, -1em 15em 0 0 $gray,
-            0 15em 0 0 $gray, 1em 15em 0 0 $gray;
+            3em 9em 0 0 $green, 4em 9em 0 0 $darkerGray, 3em 10em 0 0 $darkerGray, 2em 10em 0 0 $green,
+            1em 10em 0 0 $darkerGreen, 0 10em 0 0 $green, -1em 10em 0 0 $darkerGreen, -2em 10em 0 0 $green,
+            -3em 10em 0 0 $darkerGray, -4em 11em 0 0 $darkerGray, -3em 11em 0 0 $green, -2em 11em 0 0 $darkerGreen,
+            -1em 11em 0 0 $green, 0 11em 0 0 $darkerGreen, 1em 11em 0 0 $green, 2em 11em 0 0 $darkerGreen,
+            3em 11em 0 0 $darkerYellow, 4em 11em 0 0 $darkerGray, 5em 12em 0 0 $darkerGray, 4em 12em 0 0 $green,
+            3em 12em 0 0 $green, 2em 12em 0 0 $green, 1em 12em 0 0 $green, 0 12em 0 0 $green, -1em 12em 0 0 $green,
+            -2em 12em 0 0 $green, -3em 12em 0 0 $green, -4em 12em 0 0 $green, -5em 12em 0 0 $darkerGray,
+            -4em 13em 0 0 $darkerGray, -3em 13em 0 0 $darkerYellow, -2em 13em 0 0 $green, -1em 13em 0 0 $blue,
+            0 13em 0 0 $green, 1em 13em 0 0 $green, 2em 13em 0 0 $red, 3em 13em 0 0 $green, 4em 13em 0 0 $darkerGray,
+            3em 14em 0 0 $darkerGray, 2em 14em 0 0 $darkerGray, 1em 14em 0 0 $darkerGray, 0 14em 0 0 $tan,
+            -1em 14em 0 0 $darkerGray, -2em 14em 0 0 $darkerGray, -3em 14em 0 0 $darkerGray, -1em 15em 0 0 $darkerGray,
+            0 15em 0 0 $darkerGray, 1em 15em 0 0 $darkerGray;
     }
 }
