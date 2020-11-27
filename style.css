@@ -131,7 +131,6 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,13 +140,20 @@ section {
           flex-flow: row wrap;
   padding-top: 66px;
   /* fixed header height*/
-  margin: -66px 0 0;
+  margin: -66px 0 66px;
   /* negative fixed header height */
-  padding-bottom: 66px;
 }
 
 .section > * {
   border: 0 solid red;
+}
+
+.blur {
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 10px;
 }
 
 .content {
@@ -162,6 +168,14 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.content ul {
+  padding-left: 10px;
+}
+
+.content li {
+  padding-bottom: 5px;
 }
 
 .content > * {
@@ -207,8 +221,6 @@ section {
       align-self: flex-end;
   margin-left: auto;
   color: #cccccc;
-  padding: 5px 10px;
-  background-color: rgba(34, 34, 34, 0.5);
 }
 
 .unsplash a {
@@ -220,10 +232,22 @@ section {
   text-decoration: underline;
 }
 
+.unsplash span {
+  background-color: rgba(34, 34, 34, 0.5);
+  padding: 5px 10px;
+}
+
 .divider {
   height: 45vh;
   width: 100%;
+}
+
+.red {
   background-color: #eb0000;
+}
+
+.green {
+  background-color: #2d8434;
 }
 
 footer {
@@ -476,7 +500,7 @@ footer > * {
 
 .xmasTree:before {
   font-family: FontAwesome;
-  content: '\f005';
+  content: "\f005";
   color: #f5cd2d;
   position: absolute;
   display: block;
@@ -496,7 +520,7 @@ footer > * {
   width: 1em;
   height: 1em;
   position: relative;
-  top: 25%;
+  top: 15%;
   left: 50%;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
