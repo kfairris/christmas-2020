@@ -123,12 +123,18 @@ section {
     flex-flow: row wrap;
     padding-top: 66px; /* fixed header height*/
     // margin: -66px 0 66px; /* negative fixed header height */
+    // > div {
+    //     position: relative;
+    //     z-index: 3;
+    // }
 }
 .blur {
     height: 100%;
     width: 100%;
     backdrop-filter: blur(1px);
     padding: 10px;
+    position: relative;
+    z-index: 3;
 }
 .content {
     margin: 0 auto;
