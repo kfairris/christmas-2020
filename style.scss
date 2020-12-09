@@ -7,6 +7,7 @@ $green2: #344d2f;
 $paleYellow: #ffc64d;
 $gray: #f0f4f7;
 $darkerGray: #c8beb9;
+$lightgray: #bdbdbd;
 
 // @font-face {
 //     font-family: 'ChristmasJumper';
@@ -169,7 +170,25 @@ section {
     text-align: right;
     align-self: flex-end;
     margin-left: auto;
+    color: $lightgray;
+    a {
+        color: $lightgray;
+    }
+    a:hover {
+        color: $lightgray;
+        text-decoration: underline;
+    }
+    span {
+        background-color: rgba(34, 34, 34, 0.5);
+        padding: 5px 10px;
+    }
+}
+.photographer {
     color: $gray;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 30px;
+    margin-bottom: 0;
     a {
         color: $gray;
     }
@@ -207,7 +226,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        i{
+        i {
             font-size: 2em;
         }
         a {
@@ -290,8 +309,15 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    display: none;
+    opacity: 0.3;
+    // display: none;
 }
+//items that will appear above the snow falling
+.photo,
+.text {
+    z-index: 50;
+}
+
 // CSS page transition
 // .cards {
 //     min-width: 100%;
