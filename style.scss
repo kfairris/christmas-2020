@@ -364,6 +364,7 @@ footer {
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
     }
+}
 
 // new toggle
 
@@ -505,7 +506,8 @@ $tan: #aa782c;
 }
 
 .xmasTree:before {
-    font-family: FontAwesome;
+    font-family: "Line Awesome Free";
+    font-weight: 700;
     content: "\f005";
     color: $yellow;
     @include icon(60px);
