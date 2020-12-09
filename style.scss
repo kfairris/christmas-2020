@@ -9,13 +9,7 @@ $gray: #f0f4f7;
 $darkerGray: #c8beb9;
 $lightgray: #bdbdbd;
 
-// @font-face {
-//     font-family: 'ChristmasJumper';
-//     src: url('fonts/christmasjumper-lr5w-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-//          url('fonts/christmasjumper-lr5w-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-//          url('fonts/ChristmasJumper-Lr5W.ttf')  format('truetype'), /* Safari, Android, iOS */
-//   }
-
+//Main Layout
 body,
 body a,
 body a:hover {
@@ -39,7 +33,6 @@ header {
     background-color: $gray;
     position: sticky;
     top: 0;
-    // height: 85px;
     z-index: 100;
 }
 header .wrapper {
@@ -66,7 +59,6 @@ h3 {
 #sitename {
     width: auto;
     padding: 10px;
-    // align-self: flex-start;
 }
 #choose_mode ul {
     display: flex;
@@ -122,11 +114,6 @@ section {
     display: flex;
     flex-flow: row wrap;
     padding-top: 66px; /* fixed header height*/
-    // margin: -66px 0 66px; /* negative fixed header height */
-    // > div {
-    //     position: relative;
-    //     z-index: 3;
-    // }
 }
 .blur {
     height: 100%;
@@ -243,7 +230,7 @@ footer {
         }
     }
 }
-/* Snow effect taken from http://designshack.net/tutorialexamples/letitsnow/index.html */
+/* Snow effect from http://designshack.net/tutorialexamples/letitsnow/index.html */
 @keyframes snow {
     0% {
         background-position: 0px 0px;
@@ -292,7 +279,6 @@ footer {
     left: 0;
     right: 0;
     opacity: 0.3;
-    // display: none;
 }
 
 .snow-off {
@@ -323,36 +309,6 @@ footer {
         }
     }
 }
-
-// CSS page transition
-// .cards {
-//     min-width: 100%;
-//     height: 98%;
-//     overflow-y: auto;
-//     overflow-x: hidden;
-//     margin-top: -150%;
-//     position: absolute;
-//     background: #000;
-//     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.6);
-//     z-index: 2;
-//     -webkit-transition: all 0.8s ease-in-out;
-//     -moz-transition: all 0.8s ease-in-out;
-//     -o-transition: all 0.8s ease-in-out;
-//     transition: all 0.8s ease-in-out;
-// }
-// .cards:target {
-//     margin-top: 0%;
-// }
-//Change nav link color
-// #welcome:target ~ #menu #link-welcome,
-// #kennyalee:target ~ #menu #link-kennyalee,
-// #emma:target ~ #menu #link-emma,
-// #grant:target ~ #menu #link-grant,
-// #timothy:target ~ #menu#link-timothy,
-// #trooper:target ~ #menu #link-trooper {
-//     background: #000;
-//     color: #fff;
-// }
 
 @media (max-width: 900px) {
     section {
@@ -385,11 +341,6 @@ footer {
     nav {
         width: 100%;
     }
-    // .hamburger {
-    //     display: inline-block;
-    //     cursor: pointer;
-    // }
-
     .bar1,
     .bar2,
     .bar3 {
@@ -413,14 +364,6 @@ footer {
         -webkit-transform: rotate(45deg) translate(-8px, -8px);
         transform: rotate(45deg) translate(-8px, -8px);
     }
-    // nav ul li.menu_item{
-    //     display:none;
-    // }
-    // nav ul li.menu_item.open{
-    //     display: block;
-    //     padding: 10px;
-    // }
-}
 
 // new toggle
 
@@ -507,7 +450,6 @@ footer {
 //xmastree
 //@import "compass/css3";
 
-// $gray: #4b4b4b;
 $yellow: #f5cd2d;
 $blue: #96cbcf;
 $darkerYellow: #d8ba00;
