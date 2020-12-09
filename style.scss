@@ -22,6 +22,9 @@ body a:hover {
     color: #202020;
     text-decoration: none;
 }
+a:focus {
+    outline: thin dotted;
+}
 img {
     width: 100%;
     max-width: 100%;
@@ -233,34 +236,7 @@ footer {
             padding: 0 15px;
         }
     }
-    // position: sticky;
-    // bottom: 0;
-    // background-image: url(images/jesus-bg.jpg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: 100% 86%;
-    // display: flex;
-    // align-content: center;
 }
-// footer > * {
-//     flex: 1;
-// }
-
-/* Parallax */
-
-// .section {
-//     position: relative;
-//     overflow-x: hidden;
-//     overflow-y: scroll;
-//     perspective: 8px;
-//     perspective-origin: 0%;
-//     transform: translateZ(0px);
-// }
-// .content {
-//     transform-origin: 0;
-//     transform: translateZ(3px) scale(0.625);
-// }
-
 /* Snow effect taken from http://designshack.net/tutorialexamples/letitsnow/index.html */
 @keyframes snow {
     0% {
