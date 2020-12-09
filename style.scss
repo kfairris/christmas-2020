@@ -312,10 +312,34 @@ footer {
     opacity: 0.3;
     // display: none;
 }
+
+.snow-off {
+    display: none;
+}
 //items that will appear above the snow falling
 .photo,
 .text {
     z-index: 50;
+}
+
+#snowBug {
+    z-index: 50;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    #snowToggle {
+        background-color: #fff;
+        border: 2px solid #67b3f3;
+        color: #67b3f3;
+        border-radius: 100%;
+        i {
+            font-size: 2rem;
+        }
+        span {
+            opacity: 0;
+            display: none;
+        }
+    }
 }
 
 // CSS page transition

@@ -51,3 +51,16 @@ const navSlide = () => {
   });
 }
 navSlide();
+// Toggling snow off and on
+document.getElementById('snowToggle').onclick = toggleSnow
+
+function toggleSnow() {
+  if (document.querySelector('#snowToggle span').innerText === 'Snow off') {
+    document.querySelector('.overlay').style.display = 'none'
+    document.querySelector('#snowToggle span').innerText = 'Snow on'
+  } else {
+    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('#snowToggle span').innerText = 'Snow off'
+
+  }
+}
