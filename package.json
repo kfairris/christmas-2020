@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:config": "browser-sync start --config bs-config.js",
-    "start": "browser-sync start --server --files '*.css' '*.html' '*.js'"
+    "start": "browser-sync start --server --files '*.*css' '*.html' '*.js'"
   },
   "repository": {
     "type": "git",
